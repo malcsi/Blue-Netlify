@@ -1,9 +1,11 @@
 <ul>
   {% for post in postslist %}
   <li>
-    <strong>
-      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-    </strong>
+    <h4>
+      <strong style="margin: 10%" color="#57575d;">
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </strong>
+    </h4>
     -
     <span>
       {{ post.data.description }}
