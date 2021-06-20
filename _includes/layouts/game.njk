@@ -420,10 +420,14 @@
             <div class="match fadeOut">
               <h2 class="winner">Choose an option</h2>
               <div class="hands">
-                <img class="player-hand" src="rock.png" alt="" />
+                <img
+                  class="player-hand"
+                  src="/images/uploads/rock.png"
+                  alt=""
+                />
                 <img
                   class="computer-hand"
-                  src="_site/images/uploads/rock.png"
+                  src="/images/uploads/rock.png"
                   alt=""
                 />
               </div>
@@ -494,8 +498,8 @@
                 //Here is where we call compare hands
                 compareHands(this.textContent, computerChoice);
                 //Update Images
-                playerHand.src = `uploads/${this.textContent}.png`;
-                computerHand.src = `.uploads/${computerChoice}.png`;
+                playerHand.src = `/images/uploads/${this.textContent}.png`;
+                computerHand.src = `/images/uploads/${computerChoice}.png`;
               }, 2000);
               //Animation
               playerHand.style.animation = "shakePlayer 2s ease";
