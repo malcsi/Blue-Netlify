@@ -3,4 +3,4 @@ layout: layouts/list-base.njk
 permalink: /posts/
 ---
 
-{ % set postslist = collections.posts% } { % include "postslist.njk"% }
+{% set postslist = collections.posts%} {% include "postslist.njk"%}
