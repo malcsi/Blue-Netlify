@@ -1,7 +1,7 @@
 ---
 layout: layouts/posts-base.njk
-title: JavaScript functions
-description: Modern functions and switch statements
+title: JavaScript Practicals
+description: Switch Statements and calculations
 date: 2021-06-18
 ---
 

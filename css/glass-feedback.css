@@ -11,8 +11,8 @@ main {
 }
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 8vw) repeat(4, 15.5vw) 10vw;
-    grid-template-rows: 10vh repeat(6, 12vh) 10vh;
+    grid-template-columns: repeat(3, 0.5fr) repeat(4, 1fr) 0.5fr;
+    grid-template-rows: 0.5fr repeat(6, 1fr) 0.5fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
 }
@@ -117,6 +117,7 @@ main {
   border-radius: 30px;
 }
 
+
 .glass { 
   grid-area: 2 / 2 / 8 / 8;
   background: white;
@@ -128,129 +129,19 @@ main {
   border-radius: 2rem;
   backdrop-filter: blur(2rem); 
 }
-
-.skill-bars{
-  padding: 25px 30px;
-  margin:5%;
-  border-radius: 10px;
-}
-.skill-bars .bar{
-  margin: 20px 0;
-}
-.skill-bars .bar:first-child{
-  margin-top: 0px;
-}
-.skill-bars .bar .info{
-  margin-bottom: 5px;
-}
-.skill-bars .bar .info span{
-  font-weight: 500;
-  font-size: 17px;
-  opacity: 0;
-  animation: showText 1s 1.5 linear forwards;
-}
-@keyframes showText {
-  100%{
-    opacity: 1;
-  }
-}
-.skill-bars .bar .progress-line{
-  height: 10px;
-  width: 100%;
-  background: #f0f0f0;
-  position: relative;
-  transform: scaleX(0);
-  transform-origin: left;
-  border-radius: 10px;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
-              0 1px rgba(255,255,255,0.8);
-  animation: animate 2s cubic-bezier(1,0,0.6,1) forwards;
-}
-@keyframes animate {
-  100%{
-    transform: scaleX(1);
-  }
-}
-.bar .progress-line span{
-  height: 100%;
-  position: absolute;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-  animation: animate 1s 1s cubic-bezier(1,0,0.3,1) forwards;
-}
-.bar .progress-line.html span{
-  width: 90%;
-}
-.bar .progress-line.css span{
-  width: 80%;
-}
-.bar .progress-line.jquery span{
-  width: 60%;
-}
-.bar .progress-line.python span{
-  width: 60%;
-}
-.bar .progress-line.mysql span{
-  width: 65%;
-}
-.progress-line span::before{
-  position: absolute;
-  content: "";
-  top: -10px;
-  right: 0;
-  height: 0;
-  width: 0;
-  border: 7px solid transparent;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-  border-top-color: #000;
-  opacity: 0;
-  animation: showText2 0.5s 1.5s linear forwards;
-}
-.progress-line span::after{
-  position: absolute;
-  top: -28px;
-  right: 0;
-  font-weight: 500;
-  background: #000;
-  color: #fff;
-  padding: 1px 8px;
-  font-size: 12px;
-  border-radius: 3px;
-  opacity: 0;
-  animation: showText2 0.5s 1.5s linear forwards;
-}
-@keyframes showText2 {
-  100%{
-    opacity: 1;
-  }
-}
-.progress-line.html span::after{
-  content: "90%";
-}
-.progress-line.css span::after{
-  content: "80%";
-}
-.progress-line.jquery span::after{
-  content: "60%";
-}
-.progress-line.python span::after{
-  content: "60%";
-}
-.progress-line.mysql span::after{
-  content: "65%";
+.text p:nth-child(1){
+    font-size: 2vw;
 }
 .text p{
-    font-size: 1.4vw;
+    font-size: 1.5vw;
     text-align: center;
-    padding:0 2vw;
-    line-height: 1.3em;
+    padding:10 2vw;
+    margin-top: 10px;
+    line-height: 2em;
     color: #57575d;
-    animation: welcome 3s ease-in-out both;
+    animation: title 3s ease-in-out both;
    }
-@keyframes welcome {
+@keyframes title {
       0% {
         transform: translateX(-100px) ;
         opacity: 0;}
@@ -258,6 +149,7 @@ main {
         transform: translateX(0) ;
         opacity: 1;}
    }
+
 .text{
     grid-area: 2 / 4 / 4 / 8;
     padding:0.9rem 2rem;
@@ -271,7 +163,65 @@ main {
     z-index: 3;
     list-style: none;
 }
+form{
+    margin: 2.3%;
+    text-align: center;
+}
+label{
+    text-align: center;
+}
+#name, #email, #message {
+    margin: auto;
+}
+.form-control {
+        padding: 1%;
+        width: 20rem;
+        border:2px solid #6cdbeb;
+        border-radius: 20px;
+        text-align: center;
+        display: block;
+    }
 
+    .submit {
+        margin-top: 1%;
+        font-size: 1em;
+        font-weight: 700;
+        padding: 0.4em 0.8em;
+        border:1px solid ;
+        color: #57575d;
+        border-radius: 0.6em;
+        border: 2px solid #6cdbeb;
+        border-radius: 20px;
+        background: white;
+        background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.199)
+        );
+        }
+    .submit:hover {
+        background-color: white;
+        padding:0.6rem 1rem;
+    }
+    .tc {
+        color: #57575d;
+    }
+    .tc a {
+        color: #377a85;
+    }
+    .message {
+        width: 35em;
+        height: 7em;
+        border:2px solid #6cdbeb;
+        border-radius: 20px;
+        padding:0 10;
+        text-align: start;
+    }
+    .form-group {
+      display: block;
+    margin-bottom: 2.4%;
+    color: #57575d;
+    }
 @media only screen and (max-width: 900px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
@@ -299,6 +249,9 @@ main {
   }
   .text {
     grid-area: 4 / 1 / 6 / 3;
+  }
+  .text p:nth-child(1) {
+      font-size: 2rem;
   }
   .text p {
     font-size: 1em;

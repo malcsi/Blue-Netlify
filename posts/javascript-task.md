@@ -1,7 +1,7 @@
 ---
 layout: layouts/posts-base.njk
 title: JavaScript functions
-description: Different functions used
+description: Function and Control Flow
 date: 2021-06-16
 ---
 

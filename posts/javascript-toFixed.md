@@ -1,7 +1,7 @@
 ---
 layout: layouts/posts-base.njk
 title: JavaScript practise - toFixed()
-description: Calculates the total bill from the subtotal and tip percentage.
+description: Program to calculate a tip
 date: 2021-06-15
 ---
 <br/>
