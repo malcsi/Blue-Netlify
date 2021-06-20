@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: layouts/posts-base.njk
 title: JavaScript functions
 description: Modern functions and switch statements
 date: 2021-06-18

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: layouts/posts-base.njk
 title: JavaScript functions
 description: Different functions used
 date: 2021-06-16

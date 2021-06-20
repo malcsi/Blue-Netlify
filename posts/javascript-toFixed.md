@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: layouts/posts-base.njk
 title: JavaScript practise - toFixed()
 description: Calculates the total bill from the subtotal and tip percentage.
 date: 2021-06-15
