@@ -11,8 +11,8 @@ main {
 }
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 0.5fr) repeat(4, 1fr) 0.5fr;
-    grid-template-rows: 0.5fr repeat(6, 1fr) 0.5fr;
+    grid-template-columns: repeat(3, 8vw) repeat(4, 15.5vw) 10vw;
+    grid-template-rows: 10vh repeat(6, 12vh) 10vh;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
 }
