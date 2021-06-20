@@ -1,11 +1,13 @@
 <ul style="margin: 10%; color: #57575d">
   {% for post in postslist %}
   <li>
-    <strong>
-      <a style="color: #377a85" href="{{ post.url | url }}">{{
-        post.data.title
-      }}</a>
-    </strong>
+    <h3>
+      <strong>
+        <a style="color: #377a85" href="{{ post.url | url }}">{{
+          post.data.title
+        }}</a>
+      </strong>
+    </h3>
     -
     <span>
       {{ post.data.description }}
