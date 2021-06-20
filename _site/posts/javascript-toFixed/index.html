@@ -14,87 +14,287 @@
       href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="glass-skills.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      main {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 600;
+        min-height: 100vh;
+        background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 8vw) repeat(4, 15.5vw) 10vw;
+        grid-template-rows: 10vh repeat(6, 12vh) 10vh;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+      }
+
+      .logo {
+        grid-area: 2 / 2 / 4 / 4;
+        font-family: "Monoton";
+        z-index: 3;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 2vw;
+      }
+      .logo img {
+        width: 8em;
+      }
+      .home,
+      .projects,
+      .blog,
+      .feedback {
+        z-index: 5;
+        text-align: center;
+      }
+      .home a,
+      .projects a,
+      .blog a,
+      .feedback a {
+        color: #57575d;
+        text-decoration: none;
+        font-size: 2vw;
+        padding: 10px 25px;
+        border: 1 px solid;
+        border-radius: 20px;
+        background: white;
+        background: linear-gradient(
+          to right bottom,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.199)
+        );
+      }
+      .home a:hover,
+      .projects a:hover,
+      .blog a:hover,
+      .feedback a:hover {
+        background-color: white;
+        padding: 16px 32px;
+      }
+      .welcome {
+        text-align: center;
+        color: #57575d;
+        font-size: 2.5em;
+        animation: text 5s forwards;
+      }
+      @keyframes text {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .home {
+        grid-area: 4 / 2 / 5 / 4;
+        animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+      @keyframes slide-in-top {
+        0% {
+          transform: translateY(-1000px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .projects {
+        grid-area: 5 / 2 / 6 / 4;
+        animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s
+          both;
+      }
+      .blog {
+        grid-area: 6 / 2 / 7 / 4;
+        animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+          both;
+      }
+      .feedback {
+        grid-area: 7 / 2 / 8 / 4;
+        animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s
+          both;
+      }
+      .base {
+        grid-area: 4 / 4 / 8 / 8;
+        background: white;
+        z-index: 2;
+        background: linear-gradient(
+          to right bottom,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.199)
+        );
+        border-radius: 30px;
+        overflow-y: scroll;
+        height: 90%;
+      }
+      .base p {
+        margin: 5%;
+      }
+      .glass {
+        grid-area: 2 / 2 / 8 / 8;
+        background: white;
+        background: linear-gradient(
+          to right bottom,
+          rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.3)
+        );
+        border-radius: 2rem;
+        backdrop-filter: blur(2rem);
+      }
+      .text h4 {
+        animation: welcome 3s ease-in-out both;
+        flex: 1;
+      }
+      .text p {
+        flex: 2;
+        font-size: 2.4vw;
+        color: #57575d;
+        animation: welcome 3s ease-in-out both;
+      }
+      @keyframes welcome {
+        0% {
+          transform: translateX(-100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .text {
+        grid-area: 2 / 4 / 4 / 8;
+        padding: 0.9rem 1rem;
+        background: linear-gradient(
+          to right bottom,
+          rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.3)
+        );
+        border: 1px solid transparent;
+        border-radius: 2em;
+        z-index: 3;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      @media only screen and (max-width: 900px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 1fr repeat(2, 0.4fr) 1fr 0.5fr repeat(3, 1fr);
+          grid-column-gap: 0px;
+          grid-row-gap: 6px;
+        }
+        .logo {
+          grid-area: 1 / 1 / 2 / 4;
+        }
+        .logo img {
+          width: 12rem;
+        }
+        .home {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+        .projects {
+          grid-area: 3 / 1 / 4 / 2;
+        }
+        .blog {
+          grid-area: 2 / 2 / 3 / 3;
+        }
+        .feedback {
+          grid-area: 3 / 2 / 4 / 3;
+        }
+        .text {
+          grid-area: 4 / 1 / 6 / 3;
+        }
+        .text p {
+          font-size: 2em;
+        }
+        .base {
+          grid-area: 6 / 1 / 9 / 3;
+        }
+        .glass {
+          grid-area: 1 / 1 / 9 / 3;
+          margin-top: 20px;
+        }
+        .home a,
+        .projects a,
+        .blog a,
+        .feedback a {
+          font-size: 1.4em;
+        }
+      }
+    </style>
   </head>
   <body>
     <main>
       <div class="container">
         <div class="logo">
-          <a href="https://ana-h-blog.netlify.app"
+          <a href="https://ana-horhoianu.netlify.app/"
             ><img
               src="https://i.ibb.co/cxs25TL/output-onlinepngtools-1.png"
               alt="logo"
           /></a>
         </div>
         <div class="home">
-          <a href="https://ana-h-blog.netlify.app/posts/about/">Home</a>
+          <a href="https://ana-horhoianu.netlify.app/">Home</a>
         </div>
         <div class="projects">
-          <a href="https://ana-h-blog.netlify.app/projects">Projects</a>
+          <a href="https://ana-horhoianu.netlify.app/projects">Projects</a>
         </div>
         <div class="blog">
-          <a href="https://ana-h-blog.netlify.app/posts">Blog</a>
+          <a href="https://ana-horhoianu.netlify.app/posts">Blog</a>
         </div>
         <div class="feedback">
-          <a href="https://ana-h-blog.netlify.app/projects/feedback/"
+          <a href="https://ana-horhoianu.netlify.app//projects/feedback/"
             >Feedback</a
           >
         </div>
         <div class="text">
-          <article>
-            <p>
-              Hi, I'm Ana Maria.<br />
-              For over a decade I've been creating visual. In early 2021 I
-              became heavily interested in studying and developing websites,
-              with a particular emphasis on blending my artistic background with
-              responsive web designs. In May, I attended The Coders Guild's
-              JAMStack Bootcamp to gain further skills and knowledge.
-            </p>
-          </article>
+          <img class="pencil" src="pencil.gif" alt="" />
+          <p>JavaScript practise - toFixed()</p>
+          <h4>Program to calculate a tip</h4>
         </div>
         <div class="base">
-          <div class="skill-bars">
-            <div class="bar">
-              <div class="info">
-                <span>HTML5</span>
-              </div>
-              <div class="progress-line html">
-                <span></span>
-              </div>
-            </div>
-            <div class="bar">
-              <div class="info">
-                <span>CSS3</span>
-              </div>
-              <div class="progress-line css">
-                <span></span>
-              </div>
-            </div>
-            <div class="bar">
-              <div class="info">
-                <span>JavaScript</span>
-              </div>
-              <div class="progress-line jquery">
-                <span></span>
-              </div>
-            </div>
-            <div class="bar">
-              <div class="info">
-                <span>Bootstrap</span>
-              </div>
-              <div class="progress-line python">
-                <span></span>
-              </div>
-            </div>
-            <div class="bar">
-              <div class="info">
-                <span>Adobe Photoshop CC</span>
-              </div>
-              <div class="progress-line mysql">
-                <span></span>
-              </div>
-            </div>
-          </div>
+          <p><br/>
+In this exercise I have practised JavaScript variables, arithmetic operations and functions. 
+<br/>--------------------------------<br/><br/>
+In the first example I defined variables for the pre-tip total and the tip percentage. Following that, a calculation was conducted by adding both numbers together to get the total. The value was rounded up to display only two decimals. The result is a sentence that contains the computed total. 
+<br/><br/>
+<code>
+//  subTotal - The total price excluding the tip.<br/>
+//  tipPercent - The percentage of the subtotal to tip.<br/>
+<br/>
+const subTotal = 30.15 ;<br/>
+const tipPercent = (subTotal/100)*5;<br/>
+<br/>
+const total = subTotal + tipPercent;<br/>
+<br/>
+document.write('Your total bill, with tip, is £' + total.toFixed(2));<br/>
+</code>
+<em>
+OUTPUT:<br/>
+Your total bill, with tip, is £31.66<br/></em>
+<p><br/>--------------------------------<br/><br/>
+The second example is a procedural function that outputs the same result as the first.<br/><br/>
+<code>
+function calcBill(subTotal, tipPercent) {<br/>
+const tip = subTotal * tipPercent / 100;<br/>
+const total = subTotal + tip;<br/>
+return total.toFixed(2);<br/>
+}<br/>
+<br/>
+document.write('Your total bill, with tip, is £' + calcBill(50,5));</code>
+<br/>
+<em>
+OUTPUT: <br/>
+Your total bill, with tip, is £52.50<br/></em></p>
+</p>
         </div>
         <div class="glass"></div>
       </div>
