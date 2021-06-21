@@ -28,9 +28,9 @@ Your total bill, with tip, is £31.66<br/></em>
 The second example is a procedural function that outputs the same result as the first.<br/><br/>
 <code>
 function calcBill(subTotal, tipPercent) {<br/>
-    const tip = subTotal * tipPercent / 100;<br/>
-     const total = subTotal + tip;<br/>
-     return total.toFixed(2);<br/>
+  &nbsp;&nbsp;   const tip = subTotal * tipPercent / 100;<br/>
+  &nbsp;&nbsp;   const total = subTotal + tip;<br/>
+  &nbsp;&nbsp;    return total.toFixed(2);<br/>
 }<br/>
 <br/>
 document.write('Your total bill, with tip, is £' + calcBill(50,5));</code>
