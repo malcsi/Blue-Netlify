@@ -5,11 +5,11 @@ description: Function and Control Flow
 date: 2021-06-16
 ---
 <div style="margin:0 5%;>
-<p><br/>
-In this exercise I have been working with JavaScript variables, "if" and "else if" statements, arithmetic operators and functions.
+<p><p><br/>
+In this exercise I have been working with JavaScript variables, 'if' and 'else if' statements, arithmetic operators and functions.
 I built a few functions in this assignment and invoked them as needed.
 As seen below, the first function outputs a sentence. 
-A simple program was created that merges a first and a last name. After that,a return statement was included. 
+A simple program was created that merges a first and a last name. After that,a return statement was included. </p>
 <br/><br/>
 <code style="color: rgb(31, 32, 138)">
 function combineNames(firstName, secondName) { <br/>
