@@ -31,7 +31,7 @@ The variable &quot;temperature&quot; is used in the second function. A code was 
       &nbsp;}<br/>
       &nbsp;document.write('Should I wear a coat if the temp is less than 50: ' + temperatureFunction(40));
 </code>
-<p><em style="color: rgb(0, 140, 255);">OUTPUT: <br/>Should I wear a coat if the temp is less than 50: YES!</em></p>
+<em style="color: rgb(0, 140, 255);">OUTPUT: <br/>Should I wear a coat if the temp is less than 50: YES!</em>
 <p>---------------------------------------<br/><br/>
 <code style="color: rgb(31, 32, 138)">
 function temperatureFunc(currentTemp) {<br/>
