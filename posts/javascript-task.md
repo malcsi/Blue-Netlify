@@ -4,12 +4,12 @@ title: JavaScript functions
 description: Function and Control Flow
 date: 2021-06-16
 ---
-<div style="margin:0 5%;>
-<p><p><br/>
-In this exercise I have been working with JavaScript variables, 'if' and 'else if' statements, arithmetic operators and functions.
+<div style="margin:0 5%;">
+<p><br/>
+In this exercise I have been working with JavaScript variables, "if" and 'else if' statements, arithmetic operators and functions.
 I built a few functions in this assignment and invoked them as needed.
 As seen below, the first function outputs a sentence. 
-A simple program was created that merges a first and a last name. After that,a return statement was included. </p>
+A simple program was created that merges a first and a last name. After that,a return statement was included.
 <br/><br/>
 <code style="color: rgb(31, 32, 138)">
 function combineNames(firstName, secondName) { <br/>
@@ -22,14 +22,14 @@ My name is :Ana Maria </em>
 <br/><br/>---------------------------------------<br/><br/>
 The variable &quot;temperature&quot; is used in the second function. A code was created that instructs you to put on a coat if the temperature falls below 50 degrees. The software was expanded to display several phrases based on the value that was entered.</p>
 <code style="color: rgb(31, 32, 138);">
-  &nbsp;&nbsp;  function temperatureFunction(currentTemp) {<br/>
-    &nbsp;&nbsp;&nbsp;  let coat ='YES!';<br/>
+    function temperatureFunction(currentTemp) {<br/>
+    &nbsp;&nbsp;  let coat ='YES!';<br/>
     &nbsp;&nbsp;&nbsp;  if (currentTemp > 50) {<br/>
-      &nbsp;&nbsp;&nbsp;    coat = 'NO!'<br/>
-      &nbsp;&nbsp;&nbsp;  }<br/>
-      &nbsp;&nbsp; return coat;<br/>
-      &nbsp;&nbsp;}<br/>
-      &nbsp;&nbsp;document.write('Should I wear a coat if the temp is less than 50: ' + temperatureFunction(40));
+      &nbsp;&nbsp;    coat = 'NO!'<br/>
+      &nbsp;&nbsp;  }<br/>
+      &nbsp; return coat;<br/>
+      &nbsp;}<br/>
+      &nbsp;document.write('Should I wear a coat if the temp is less than 50: ' + temperatureFunction(40));
 </code>
 <p><em style="color: rgb(0, 140, 255);">OUTPUT: <br/>Should I wear a coat if the temp is less than 50: YES!</em></p>
 <p>---------------------------------------<br/><br/>
