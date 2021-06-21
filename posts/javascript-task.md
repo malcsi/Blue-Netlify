@@ -4,7 +4,7 @@ title: JavaScript functions
 description: Function and Control Flow
 date: 2021-06-16
 ---
-
+<div style="margin:0 5%;>
 <p><br/>
 In this exercise I have been working with JavaScript variables, "if" and "else if" statements, arithmetic operators and functions.
 I built a few functions in this assignment and invoked them as needed.
@@ -80,3 +80,4 @@ Stay inside<br/>
 Stay inside<br/>
 </em></p>
 </p>
+</div>
