@@ -4,9 +4,10 @@ title: JavaScript + pseudocodes
 description: Functions with arrays, loops + pseudocodes
 date: 2021-06-18
 ---
-PSEUDOCODE: 
-<pre>
+
+<pre style="margin: 5%;">
 <code>
+PSEUDOCODE: 
 
  //FOR LOOP:
 /*
