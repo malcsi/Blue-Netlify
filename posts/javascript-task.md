@@ -6,10 +6,12 @@ date: 2021-06-16
 ---
 <pre style="margin:5%;">
 
-In this exercise I have been working with JavaScript variables, "if" and 'else if' statements, arithmetic operators and functions.
+In this exercise I have been working with JavaScript variables, "if" and 'else if'
+ statements, arithmetic operators and functions.
 I built a few functions in this assignment and invoked them as needed.
 As seen below, the first function outputs a sentence. 
-A simple program was created that merges a first and a last name. After that,a return statement was included.
+A simple program was created that merges a first and a last name. After that,a return
+ statement was included.
 
 <code style="color: blue">
 function combineNames(firstName, secondName) {
@@ -24,7 +26,9 @@ OUTPUT:
 My name is :Ana Maria </em>
 
 <br/>---------------------------------------<br/><br/>
-The variable 'temperature' is used in the second function. A code was created that instructs you to put on a coat if the temperature falls below 50 degrees. The software was expanded to display several phrases based on the value that was entered.
+The variable 'temperature' is used in the second function. A code was created that
+ instructs you to put on a coat if the temperature falls below 50 degrees. The software
+  was expanded to display several phrases based on the value that was entered.
 <code style="color: blue;">
     function temperatureFunction(currentTemp) {
       let coat ='YES!';
@@ -73,7 +77,8 @@ Over 50 degrees: Pants and vest is fine!
 
 <br/>---------------------------------------<br/><br/>
 
-The third function adds a logical operator to the 'Shall I wear a coat?' program. The software defines 'if' and 'else if' to determine whether you should go or stay inside.
+The third function adds a logical operator to the 'Shall I wear a coat?' program.
+The software defines 'if' and 'else if' to determine whether you should go or stay inside.
 
 <code style="color: blue">
   function tempFunc(currentTemp) {
