@@ -41,7 +41,27 @@ for (let i = 1; i <= 20; i++) {
     }
   }
 </code>
-
+OUTPUT: 
+1
+2
+3 -Fizz
+4
+5 -Buzz
+6 -Fizz
+7
+8
+9 -Fizz
+10 -Buzz
+11
+12 -Fizz
+13
+14
+15 -FizzBuzz
+16
+17
+18 -Fizz
+19
+20 -Buzz
 <br/>------------------------<br/><br/>
 
 <code style="color: green">
@@ -94,6 +114,9 @@ if (books[1].read === true) {
   document.write("You still need to read " + secondBook);
 }
 </code>
+OUPUT:
+You already read Good vibes, good life by Vex King
+You still need to read The Vanishing Half by Brit Bennett
 <br/>------------------------<br/><br/>
 
 <code style="color: green">
@@ -142,6 +165,19 @@ recipe.directions.forEach(function(direction, index) {
   document.write(index + 1 + ': ' + direction + '<br />');
 });
 </code>
+OUPUT:
+Recipe name: Tea
+Servings: 4
+
+Ingredients:
+1: Tea bag
+2: Water
+3: Milk
+
+Directions:
+1: Put the tea bag in a cup of water
+2: Leave to rest for 5 minutes
+3: Remove the bag and add milk
 
 <br/>------------------------<br/><br/>
 
@@ -183,4 +219,8 @@ fixStart("papirus");
 fixStart("mama");
 
 </code>
+OUPUT:
+ba**le
+pa*irus
+ma*a
 </pre>
