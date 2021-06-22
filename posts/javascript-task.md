@@ -18,7 +18,7 @@ function combineNames(firstName, secondName) {
 }
 
 combineNames('Ana', 'Maria');
-
+</code>
 <em style="color: green">
 OUTPUT:
 My name is :Ana Maria </em>
@@ -88,7 +88,7 @@ The third function adds a logical operator to the 'Shall I wear a coat?' program
 document.write(tempFunc(50));
 document.write(tempFunc(10));
 document.write(tempFunc(72));
-</code></p>
+</code>
 <em style="color: green;">
 OUTPUT: 
 Go outside
