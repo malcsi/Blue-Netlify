@@ -2,11 +2,10 @@
 layout: layouts/posts-base.njk
 title: JavaScript + pseudocodes 
 description: Functions with arrays, loops + pseudocodes
-date: 2021-06-18
+date: 2021-06-22s
 ---
-
 <pre style="margin: 5%;">
-<code>
+<code style="color: green">
 PSEUDOCODE: 
 
  //FOR LOOP:
@@ -26,7 +25,9 @@ PSEUDOCODE:
   //write counter only
 */
 
-//JavaScript Code
+//REAL CODE :
+</code>
+<code style="color: blue">
 for (let i = 1; i <= 20; i++) {
     if (i % 15 === 0 ) {
       document.write(i + " -FizzBuz <br/> ")
@@ -39,10 +40,12 @@ for (let i = 1; i <= 20; i++) {
     }
   }
 </code>
+
+<br/>------------------------<br/><br/>
+
+<code style="color: green">
 PSEUDOCODE: 
 
-<code>
-<br/><br/>------------------------<br/><br/>
 /*
 Create an array of multiple objects  
  - title: string,
@@ -59,9 +62,10 @@ Create an array of multiple objects
   
 }
 */
-<br/>
-//Real code:
 
+//Real code:
+</code>
+<code style="color: blue">
 
 const books = [{
   title: "Good vibes, good life",
@@ -89,10 +93,11 @@ if (books[1].read === true) {
   document.write("You still need to read " + secondBook);
 }
 </code>
-<br/><br/>------------------------<br/><br/>
+<br/>------------------------<br/><br/>
+
+<code style="color: green">
 PSEUDOCODE: 
 
-<code>
 /*
 recipe objects: 
 {
@@ -113,8 +118,9 @@ recipe objects:
   //write directions + index + new line
 }
 */
-
-
+//Real code: 
+</code>
+<code style="color: blue">
 
 let recipe = {
   title: "Tea",
@@ -136,10 +142,10 @@ recipe.directions.forEach(function(direction, index) {
 });
 </code>
 
-<br/><br/>------------------------<br/><br/>
-PSEUDOCODE: 
+<br/>------------------------<br/><br/>
 
-<code>
+<code style="color: green">
+PSEUDOCODE: 
 
 /* 
 -Define FUNCTION - one argument 
@@ -151,7 +157,9 @@ FOR (index starts at 1, add one each time) {
 }
 -IF not leave it the same
 */
-
+//Real code: 
+</code>
+<code style="color: blue">
 function fixStart(word) {
   
   let charArray = word.split("")
