@@ -152,7 +152,6 @@
         flex: 1;
       }
       .text p {
-        flex: 2;
         font-size: 2.4vw;
         color: #57575d;
         animation: welcome 3s ease-in-out both;
@@ -169,7 +168,7 @@
       }
       .text {
         grid-area: 2 / 4 / 4 / 8;
-        padding: 0.9rem 1rem;
+        padding: 10vh 0.5rem;
         background: linear-gradient(
           to right bottom,
           rgba(255, 255, 255, 0.7),
@@ -250,6 +249,7 @@
       }
       .hands img {
         margin-bottom: 5%;
+        width: 15vw;
       }
       .player-hand {
         transform: rotateY(180deg);
@@ -345,7 +345,16 @@
         }
         .blog {
           grid-area: 2 / 2 / 3 / 3;
+        }
+        .game{
           overflow-x: hidden;
+        }
+        .hands img{
+          width: 44vw;
+        }
+        .options button{
+          font-size: 1.2em;
+          width: 20vw;
         }
         .feedback {
           grid-area: 3 / 2 / 4 / 3;
@@ -354,7 +363,7 @@
           grid-area: 4 / 1 / 6 / 3;
         }
         .text p {
-          font-size: 2em;
+          font-size: 1.4em;
         }
         .base {
           grid-area: 6 / 1 / 9 / 3;
@@ -397,7 +406,6 @@
           >
         </div>
         <div class="text">
-          <img class="pencil" src="pencil.gif" alt="" />
           <p>Rock, paper, scrissors</p>
           <h4></h4>
         </div>
