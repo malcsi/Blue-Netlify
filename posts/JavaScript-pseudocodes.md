@@ -64,7 +64,7 @@ OUTPUT:
 20 -Buzz
 <br/>------------------------<br/><br/>
 
-<code style="color: green">
+<code style="color: green;">
 PSEUDOCODE: 
 
 /*

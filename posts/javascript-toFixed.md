@@ -5,13 +5,9 @@ description: Program to calculate a tip
 date: 2021-06-15
 ---
 <pre style="margin: 5%;">
-In this exercise I have practised JavaScript variables, arithmetic operations and
- functions. 
+In this exercise I have practised JavaScript variables, arithmetic operations and functions. 
 <br/>--------------------------------<br/><br/>
-In the first example I defined variables for the pre-tip total and the tip percentage.
-Following that, a calculation was conducted by adding both numbers together to get the
-total. The value was rounded up to display only two decimals. The result is a sentence
-that contains the computed total. 
+In the first example I defined variables for the pre-tip total and the tip percentage. Following that, a calculation was conducted by adding both numbers together to get the total. The value was rounded up to display only two decimals. The result is a sentence that contains the computed total. 
 
 <code style="color: blue">
 //  subTotal - The total price excluding the tip.

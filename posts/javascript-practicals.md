@@ -5,8 +5,7 @@ description: Switch Statements and calculations
 date: 2021-06-18
 ---
 <pre style="margin: 5%;">
-In this exercise, I completed three tasks using JavaScript functions written this time
- in a modern style, and also switch statements were used.
+In this exercise, I completed three tasks using JavaScript functions written this time in a modern style, and also switch statements were used.
 <br/>-----------------------------------<br/>
 For the first exercise, I wrote a function that returns a percentage of a given integer.
 
@@ -22,8 +21,7 @@ document.write(percentageCalculator(387, 4.3));
 <em style="color: green" >OUTPUT: 16.641 </em>
 
 <br/>-----------------------------------<br/><br/>
-The second exercise is a basic programme that allows us to order three different 
-types of drinks, each with three different sizes.
+The second exercise is a basic programme that allows us to order three different types of drinks, each with three different sizes.
 
 <code style="color: blue">
 const sizeAndDrinkOrder = (size, drink) => {
@@ -54,8 +52,7 @@ You have ordered a Small of Lemonade
 </em>
 
 <br/>-----------------------------------<br/><br/>
-The third function produced a calculator able to operate in two numbers by adding,
- supplying, multiplying, dividing or modulus.
+The third function produced a calculator able to operate in two numbers by adding, supplying, multiplying, dividing or modulus.
 
 <code style="color: blue">
 const calculator = (number1, number2, operator) => {

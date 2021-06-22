@@ -167,6 +167,11 @@
           opacity: 1;
         }
       }
+      .base pre{
+        white-space: pre-wrap;
+          word-wrap: break-word;
+          text-align: justify;
+      }
       .text {
         grid-area: 2 / 4 / 4 / 8;
         padding: 0.9rem 1rem;
@@ -186,8 +191,8 @@
       }
       @media only screen and (max-width: 900px) {
         .container {
-          grid-template-columns: repeat(2, 48vw);
-          grid-template-rows: 20vh repeat(2, 10vh) 5vh 10vh repeat(3, 20vh);
+          grid-template-columns: repeat(2, 11.15em);
+          grid-template-rows: 20vh repeat(2, 10vh) 11vh 10vh repeat(3, 20vh);
           grid-column-gap: 0px;
           grid-row-gap: 6px;
         }
@@ -211,9 +216,10 @@
         }
         .text {
           grid-area: 4 / 1 / 6 / 3;
+          text-align: center;
         }
         .text p {
-          font-size: 2em;
+          font-size: 1.4em;
         }
         .base {
           grid-area: 6 / 1 / 9 / 3;
@@ -261,78 +267,100 @@
           <h4>Function and Control Flow</h4>
         </div>
         <div class="base">
-          <p><br/>
-In this exercise I have been working with JavaScript variables, "if" and "else if" statements, arithmetic operators and functions.
+          <p><pre style="margin:5%;">
+
+In this exercise I have been working with JavaScript variables, "if" and 'else if'
+ statements, arithmetic operators and functions.
 I built a few functions in this assignment and invoked them as needed.
 As seen below, the first function outputs a sentence. 
-A simple program was created that merges a first and a last name. After that,a return statement was included. 
-<code>
-function combineNames(firstName, secondName) { <br/>
-  document.write('My name is :' + firstName + ' ' + secondName); <br/>
-}<br/>
-<p>combineNames('Ana', 'Maria');<br/> </code>
-<em>OUTPUT:<br/>
+A simple program was created that merges a first and a last name. After that,a return
+ statement was included.
+
+<code style="color: blue">
+function combineNames(firstName, secondName) {
+  document.write('My name is :' + firstName + ' ' + secondName);
+  document.write('<br />');
+}
+
+combineNames('Ana', 'Maria');
+</code>
+<em style="color: green">
+OUTPUT:
 My name is :Ana Maria </em>
-<br/>---------------------------------------<br/>
-The variable &quot;temperature&quot; is used in the second function. A code was created that instructs you to put on a coat if the temperature falls below 50 degrees. The software was expanded to display several phrases based on the value that was entered.&lt;/</p>
-<code>
-  function temperatureFunction(currentTemp) {<br/>
-  let coat ='YES!';<br/>
-  if (currentTemp > 50) {<br/>
-    coat = 'NO!'<br/>
-  }<br/>
-  return coat;<br/>
-}<br/>
-document.write('Should I wear a coat if the temp is less than 50: ' + temperatureFunction(40));</code>
-<p><em>OUTPUT: <br/>Should I wear a coat if the temp is less than 50: YES!</em></p>
-<p><br/>---------------------------------------<br/>
-<code>
-function temperatureFunc(currentTemp) {<br/>
-let coat = &quot;&quot;;<br/>
-<br/>
-if (currentTemp &lt; 0) {<br/>
-coat = 'Stay inside!';<br/>
-} else if (currentTemp &lt; 30) {<br/>
-coat = 'Yes, but with a hat.';<br/>
-} else if (currentTemp &lt; 50) {<br/>
-coat = 'YES!'<br/>
-} else {<br/>
-coat = 'Pants and vest is fine!';<br/>
-}<br/>
-return coat;<br/>
-}<br/>
-<br/>
-document.write('Less than 50 degrees: ' + temperatureFunc(49));<br/>
-document.write('Less than 30 degrees: ' + temperatureFunc(25));<br/>
-document.write('Less than 0 degrees: ' + temperatureFunc(-2));<br/>
-document.write('Over 50 degrees: ' + temperatureFunc(55));<br/> </code></p>
-<p><em>OUTPUT: <br/>
-Less than 50 degrees: YES! <br/>
-Less than 30 degrees: Yes, but with a hat.<br/>
-Less than 0 degrees: Stay inside!<br/>
-Over 50 degrees: Pants and vest is fine!<br/>
+
+<br/>---------------------------------------<br/><br/>
+The variable 'temperature' is used in the second function. A code was created that instructs you to put on a coat if the temperature falls below 50 degrees. The software was expanded to display several phrases based on the value that was entered.
+<code style="color: blue;">
+    function temperatureFunction(currentTemp) {
+      let coat ='YES!';
+     if (currentTemp > 50) {
+        coat = 'NO!'
+     }
+   return coat;
+ }
+  document.write('Should I wear a coat if the temp is less than 50: ' + temperatureFunction(40));
+</code>
+<em style="color: green;">
+OUTPUT:
+Should I wear a coat if the temp is less than 50: YES!</em>
+
+<br/>---------------------------------------<br/><br/>
+
+<code style="color: blue">
+function temperatureFunc(currentTemp) {
+  let coat = "";
+  
+  if (currentTemp < 0) {
+    coat = 'Stay inside!';
+  } else if (currentTemp < 30) {
+    coat = 'Yes, but with a hat.';
+  } else if (currentTemp < 50) {
+    coat = 'YES!'
+  } else {
+    coat = 'Pants and vest is fine!';
+  }
+  return coat;
+}
+
+document.write('Less than 50 degrees: ' + temperatureFunc(49));
+document.write('Less than 30 degrees: ' + temperatureFunc(25));
+document.write('Less than 0 degrees: ' + temperatureFunc(-2));
+document.write('Over 50 degrees: ' + temperatureFunc(55));
+
+</code>
+<em style="color: green">
+OUTPUT: 
+Less than 50 degrees: YES! 
+Less than 30 degrees: Yes, but with a hat.
+Less than 0 degrees: Stay inside!
+Over 50 degrees: Pants and vest is fine!
 </em>
-<br/>---------------------------------------<br/>
-The third function adds a logical operator to the &quot;Shall I wear a coat?&quot; program. The software defines &quot;if&quot; and &quot;else if&quot; to determine whether you should go or stay inside.</p>
-<code>
-function tempFunc(currentTemp) {<br/>
-  let coat = "Go outside";<br/>
-  <br/>
-  if (currentTemp > 70 || currentTemp < 20) {<br/>
-    coat = "Stay inside";<br/>
-  }<br/>
-  return coat;<br/>
-}<br/>
-<p>document.write(tempFunc(50));<br/>
-document.write(tempFunc(10));<br/>
-document.write(tempFunc(72));<br/>
-</code></p>
-<p><em>OUTPUT: <br/>
-Go outside<br/>
-Stay inside<br/>
-Stay inside<br/>
-</em></p>
-</p>
+
+<br/>---------------------------------------<br/><br/>
+
+The third function adds a logical operator to the 'Shall I wear a coat?' program. The software defines 'if' and 'else if' to determine whether you should go or stay inside.
+
+<code style="color: blue">
+  function tempFunc(currentTemp) {
+  let coat = "Go outside";
+  
+  if (currentTemp > 70 || currentTemp < 20) {
+    coat = "Stay inside";
+  }
+  return coat;
+}
+
+document.write(tempFunc(50));
+document.write(tempFunc(10));
+document.write(tempFunc(72));
+</code>
+<em style="color: green;">
+OUTPUT: 
+Go outside
+Stay inside
+Stay inside
+</em>
+</pre></p>
         </div>
         <div class="glass"></div>
       </div>

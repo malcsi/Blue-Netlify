@@ -181,19 +181,19 @@ main {
   animation: animate 1s 1s cubic-bezier(1,0,0.3,1) forwards;
 }
 .bar .progress-line.html span{
-  width: 90%;
+  width: 85%;
 }
 .bar .progress-line.css span{
-  width: 80%;
+  width: 70%;
 }
-.bar .progress-line.jquery span{
-  width: 60%;
+.bar .progress-line.javascript span{
+  width: 40%;
 }
-.bar .progress-line.python span{
-  width: 60%;
+.bar .progress-line.bootstrap span{
+  width: 50%;
 }
-.bar .progress-line.mysql span{
-  width: 65%;
+.bar .progress-line.photoshop span{
+  width: 50%;
 }
 .progress-line span::before{
   position: absolute;
@@ -228,19 +228,19 @@ main {
   }
 }
 .progress-line.html span::after{
-  content: "90%";
+  content: "85%";
 }
 .progress-line.css span::after{
-  content: "80%";
+  content: "70%";
 }
-.progress-line.jquery span::after{
-  content: "60%";
+.progress-line.javascript span::after{
+  content: "40%";
 }
-.progress-line.python span::after{
-  content: "60%";
+.progress-line.bootstrap span::after{
+  content: "50%";
 }
-.progress-line.mysql span::after{
-  content: "65%";
+.progress-line.photoshop span::after{
+  content: "66%";
 }
 .text p{
     font-size: 1.4vw;
