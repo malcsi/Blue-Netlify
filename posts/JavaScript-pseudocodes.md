@@ -4,6 +4,7 @@ title: JavaScript + pseudocodes
 description: Functions with arrays, loops + pseudocodes
 date: 2021-06-22s
 ---
+  JavaScript + pseudocodes 
 <pre style="margin: 5%;">
 <code style="color: green">
 PSEUDOCODE: 
