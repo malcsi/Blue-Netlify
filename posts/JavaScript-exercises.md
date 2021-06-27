@@ -1,8 +1,8 @@
 ---
 layout: layouts/posts-base.njk
-title: JavaScript functions
-description: Function and Control Flow
-date: 2021-06-16
+title: JavaScript - Array of objects
+description: Functions using array of objects
+date: 2021-06-27
 ---
 <pre style="margin:5%;">
 
