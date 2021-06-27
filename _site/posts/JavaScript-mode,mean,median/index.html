@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ana-Maria Horhoianu</title>
+    <title>Glass Website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
@@ -120,7 +120,6 @@
         animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s
           both;
       }
-
       .base {
         grid-area: 4 / 4 / 8 / 8;
         background: white;
@@ -131,8 +130,12 @@
           rgba(255, 255, 255, 0.199)
         );
         border-radius: 30px;
+        overflow-y: scroll;
+        height: 90%;
       }
-
+      .base p {
+        margin: 5%;
+      }
       .glass {
         grid-area: 2 / 2 / 8 / 8;
         background: white;
@@ -144,9 +147,12 @@
         border-radius: 2rem;
         backdrop-filter: blur(2rem);
       }
-
+      .text h4 {
+        animation: welcome 3s ease-in-out both;
+        flex: 1;
+      }
       .text p {
-        flex: 3;
+        flex: 2;
         font-size: 2.4vw;
         color: #57575d;
         animation: welcome 3s ease-in-out both;
@@ -161,9 +167,20 @@
           opacity: 1;
         }
       }
+
+      .base pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        text-align: justify;
+        color: #57575d;
+        font-size: 1.3em;
+        font-family: "Ubuntu", sans-serif;
+        text-align: justify;
+      }
+
       .text {
         grid-area: 2 / 4 / 4 / 8;
-        padding: 0.9rem 2rem;
+        padding: 0.9rem 1rem;
         background: linear-gradient(
           to right bottom,
           rgba(255, 255, 255, 0.7),
@@ -174,13 +191,9 @@
         z-index: 3;
         list-style: none;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-      }
-      .pencil {
-        margin: auto;
-        margin-left: 22%;
-        width: 13%;
       }
       @media only screen and (max-width: 900px) {
         .container {
@@ -209,13 +222,10 @@
         }
         .text {
           grid-area: 4 / 1 / 6 / 3;
-        }
-        .pencil {
-          width: 25%;
-          margin-left: 8%;
+          text-align: center;
         }
         .text p {
-          font-size: 2em;
+          font-size: 1.4em;
         }
         .base {
           grid-area: 6 / 1 / 9 / 3;
@@ -258,49 +268,115 @@
           >
         </div>
         <div class="text">
-          <img
-            class="pencil"
-            src="https://i.ibb.co/zSMHv5P/animat-pencil-color.gif"
-            alt=""
-          />
-          <p>PROJECTS</p>
+          <img class="pencil" src="pencil.gif" alt="" />
+          <p>JavaScript - Mode, mean, median</p>
+          <h4>Function which returns the mode, mean and median of an array</h4>
         </div>
         <div class="base">
- <ul style="margin: 5% 10%; color: #57575d">
-  
-  <li style="line-height: 2.2em">
-    <strong>
-      <a style="color: #377a85" href="/projects/survey/">Survey Form</a>
-    </strong>
-    -
-    <span>
-      With this poll we want to find out how the general public views magic in 2021.
-    </span>
-  </li>
-  
-  <li style="line-height: 2.2em">
-    <strong>
-      <a style="color: #377a85" href="/projects/feedback/">Feedback</a>
-    </strong>
-    -
-    <span>
-      Thank you for taking the time to provide your feedback.
-    </span>
-  </li>
-  
-  <li style="line-height: 2.2em">
-    <strong>
-      <a style="color: #377a85" href="/projects/Rock-paper-scissors/">Rock, paper, scrissors</a>
-    </strong>
-    -
-    <span>
-      Play a classic game of Rock-Paper-Scissors.
-    </span>
-  </li>
-  
-</ul>
+          <p><pre style="margin:5%;">
 
-</div>
+The mean, median, and mean of an array will be determined using if statements within a function with two parameters, the array and a type variable.
+
+
+<u>Mean</u>
+For the mean part of the function I will sum up all of the numbers from the array and the divide them by the total number of elements. 
+
+
+<u>Median</u>
+To calculate the median of an array, the code will first check the array's parity to see if there are one or two middles. 
+If there is one, it will return the midpoint, which is the median; otherwise, it will display the mean of these two numbers. 
+
+<u>Mode</u>
+After sorting the array we will look for the highest number and then create a new empty array filled with zeros to assist us in calculating the frequency of each number; This array's index will represent the number, and the value within it will reflect the frequency.
+Using the "for" loop once again, the highest frequency is identified, then count how often all this numbers appears and if there is more than one, an array will be returned with the numbers having the highest frequency.
+
+<code style="color: blue">
+let myGrades = [12, 57, 34, 57, 23, 87, 34, 96, 57, 34,]
+
+function calculator(array, type) 
+{
+  if (type === "mean") 
+  {
+      let getMean = 0;
+      for (let i = 0; i < array.length; i++) 
+      {
+        getMean += array[i] 
+      }
+      return getMean / array.length
+
+} 
+  if (type === "median") {
+      array.sort()
+      console.log(array.sort())
+      let arrLen = array.length
+      let median = 0
+      if (arrLen % 2 !== 0) 
+      {
+        median = array[(arrLen - 1) / 2];
+      } else 
+      { 
+        let median1 = arrLen / 2 
+        let median2 = arrLen / 2 - 1
+        median = (array[median1] + array[median2]) / 2
+      }
+      return median 
+}
+
+if (type === "mode") 
+{
+      array.sort()
+      let max = 0;
+      let countmax = 0;
+      let biggestNumber = array[array.length - 1]
+      let newEmptyArray = new Array(biggestNumber + 1);
+      for (let i = 0; i < newEmptyArray.length; i++) 
+      { 
+        newEmptyArray[i] = 0
+      };
+      for (let i = 0; i < array.length; i++) 
+      {
+        newEmptyArray[ array[i] ]++ ; 
+      };
+      for (let i = 0; i < newEmptyArray.length; i++) 
+      {
+        if (newEmptyArray[i] > max) {
+          max = newEmptyArray[i];
+        }; 
+      };
+      for (let i = 0; i < newEmptyArray.length; i++) 
+      {
+        if (newEmptyArray[i] === max) {
+          countmax++
+          console.log(countmax)
+        };
+      };
+      let emptyMaxArray = new Array(countmax);
+      k = 0;
+        for (let i = 0;i < biggestNumber; i++ ) 
+        {
+          if ( newEmptyArray[i] === max) {
+            emptyMaxArray[k] = i;
+            k++
+          };
+        };
+      return emptyMaxArray
+ }
+}
+
+document.write("Mode: " + calculator(myGrades, "mode"))
+document.write("Mean: " + calculator(myGrades, "mean"))
+document.write("Median: " + calculator(myGrades, "median"))
+  
+  </code>
+
+<em style="color: green">
+OUPUT:
+Mode: 34,57
+Mean: 48.5
+Median: 45.5
+</em>
+</pre></p>
+        </div>
         <div class="glass"></div>
       </div>
     </main>
