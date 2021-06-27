@@ -6,7 +6,7 @@ date: 2021-06-27
 ---
 <pre style="margin:5%;">
 
-In this exercises, I will use a single array of objects that will serve the same purpose throughout the task. I will also use the toFixed() method to display only two decimals.
+In this exercises, I will use a single array of objects that will serve the same purpose throughout the task. I will also use the toFixed() method to display only two decimals of the totsl price.
 
 <code style="color: blue">
 let shoppingCart = [
@@ -25,7 +25,7 @@ let shoppingCart = [
 
 <u>Part 1</u>
 
-In the first part I will calculate the total cost by looping through the items in the shopping cart. 
+In the first part I will calculate the total cost by looping through the items in the shopping cart and multiply the quantity by the price.
 
 <code style="color: blue">
 function myTotalPrice(Arr) {
@@ -45,7 +45,7 @@ OUTPUT: Total price: 39.37
 
 <u>Part 2</u>
 
-Now I'm going to apply a 20% discount on the food items.
+Now a 20% discount will be applied on the food items.
 
 <code style="color: blue">
 function totalWithFoodDiscount(Array) {
@@ -111,13 +111,13 @@ document.write(part5(shoppingCart, 2, 5, true))
 
 <em style="color: green">
 OUTPUT:
-steak: 3.99
+Steak: 3.99
 Quantity: 2
 ,
-blue cheese: 2.99
+Blue cheese: 2.99
 Quantity: 1
 ,
-cheesecake: 4.99
+Cheesecake: 4.99
 Quantity: 1
 </em>
 </pre>
