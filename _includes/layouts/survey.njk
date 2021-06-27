@@ -15,11 +15,11 @@
     body {
         font-family: verdana;
         width: 80%;
-        min-width: 1080px;
         margin: auto;
-        color: white;
+        color: #57575d;
         padding-left: 13%;
         padding-right: 13%;
+        font-weight: 600;
     }
 
     body::before {
@@ -32,19 +32,19 @@
         margin: auto;
         z-index: -1;
         background: rgb(0,0,0);
-        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(20,9,6,1) 49%, rgba(104,4,4,1) 100%);
+        background: linear-gradient(to right top, #65dfc9, #6cdbeb);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
-
 
     p {
         font-size: 1.3rem;
     }
 
     .container {
-        margin: 20px ;
+        margin: 50px;
+        text-align: center;
     }
 
     .form-group {
@@ -75,10 +75,12 @@
         border-radius: 25px;
         z-index: 2;
         position: relative;
-        box-shadow: 0px -1px 10px 5px white;
-        line-height: 25px;
+        box-shadow: 0px -1px 10px 5px  #57575d;
+        line-height: 30px;
     }
-
+    #description {
+        line-height: 60px;
+    }
     .input-radio {
         display: block;
         margin: 15px;
@@ -132,23 +134,30 @@
     }
     .btn {
         background-color: transparent;
-        color: white;
+        color: #57575d;
         border: none;
         border-radius: 40px;
         position: absolute;
         left: 5%;
         top: 5%;
+        font-weight: 700;
+        font-size: 20px;
     }
     .comments {
         margin: auto;
         text-align: center;
+    }
+    @media only screen and (max-width: 1400px) {
+        body {
+            margin: auto;
+        }
     }
     </style>
  </head>
  <body>
   <header>
    <div class="container">
-    <a href="https://ana-h-blog.netlify.app/"><button class="btn">&larr; Back</button></a>
+    <a href="https://ana-horhoianu.netlify.app/projects"><button class="btn">&larr; Back</button></a>
     <h1 id="title">Survey Form</h1>
      <p id="description">Hi there! Thanks for stopping by! </p>
     <p>With this poll we want to find out how the general public views <strong>MAGIC</strong> in <strong>2021</strong>.</p>
