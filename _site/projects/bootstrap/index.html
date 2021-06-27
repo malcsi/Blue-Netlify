@@ -144,14 +144,19 @@
         border-radius: 2rem;
         backdrop-filter: blur(2rem);
       }
-
-      .text p {
-        flex: 3;
-        font-size: 2.4vw;
-        color: #57575d;
-        animation: welcome 3s ease-in-out both;
+      .text p:nth-child(1) {
+        font-size: 2vw;
       }
-      @keyframes welcome {
+      .text p {
+        font-size: 1.5vw;
+        text-align: center;
+        padding: 10 2vw;
+        margin-top: 10px;
+        line-height: 2em;
+        color: #57575d;
+        animation: title 3s ease-in-out both;
+      }
+      @keyframes title {
         0% {
           transform: translateX(-100px);
           opacity: 0;
@@ -161,6 +166,7 @@
           opacity: 1;
         }
       }
+
       .text {
         grid-area: 2 / 4 / 4 / 8;
         padding: 0.9rem 2rem;
@@ -173,14 +179,67 @@
         border-radius: 2em;
         z-index: 3;
         list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
-      .pencil {
+      form {
+        margin-top: 2%;
+        text-align: center;
+      }
+      label {
+        text-align: center;
+      }
+      #name,
+      #email,
+      #message {
         margin: auto;
-        margin-left: 22%;
-        width: 13%;
+      }
+      .form-control {
+        padding: 1%;
+        width: 20rem;
+        border: 2px solid #6cdbeb;
+        border-radius: 20px;
+        text-align: center;
+        display: block;
+      }
+
+      .submit {
+        margin-top: 1%;
+        font-size: 1em;
+        font-weight: 700;
+        padding: 0.3em 0.8em;
+        border: 1px solid;
+        color: #57575d;
+        border-radius: 0.6em;
+        border: 2px solid #6cdbeb;
+        border-radius: 20px;
+        background: white;
+        background: linear-gradient(
+          to right bottom,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.199)
+        );
+      }
+      .submit:hover {
+        background-color: white;
+        padding: 0.6rem 1rem;
+      }
+      .tc {
+        color: #57575d;
+      }
+      .tc a {
+        color: #377a85;
+      }
+      .message {
+        width: 25em;
+        height: 7em;
+        border: 2px solid #6cdbeb;
+        border-radius: 20px;
+        padding: 0 10;
+        text-align: start;
+      }
+      .form-group {
+        display: block;
+        margin-bottom: 1.2%;
+        color: #57575d;
       }
       @media only screen and (max-width: 900px) {
         .container {
@@ -210,12 +269,11 @@
         .text {
           grid-area: 4 / 1 / 6 / 3;
         }
-        .pencil {
-          width: 25%;
-          margin-left: 8%;
+        .text p:nth-child(1) {
+          font-size: 2rem;
         }
         .text p {
-          font-size: 2em;
+          font-size: 1em;
         }
         .base {
           grid-area: 6 / 1 / 9 / 3;
@@ -253,64 +311,60 @@
           <a href="https://ana-horhoianu.netlify.app/posts">Blog</a>
         </div>
         <div class="feedback">
-          <a href="https://ana-horhoianu.netlify.app//projects/feedback/"
+          <a href="https://ana-horhoianu.netlify.app/projects/feedback/"
             >Feedback</a
           >
         </div>
         <div class="text">
-          <img
-            class="pencil"
-            src="https://i.ibb.co/zSMHv5P/animat-pencil-color.gif"
-            alt=""
-          />
-          <p>PROJECTS</p>
+          <article>
+            <p>Feedback</p>
+            <p>Thank you for taking the time to provide your feedback.</p>
+          </article>
         </div>
         <div class="base">
- <ul style="margin: 5% 10%; color: #57575d">
-  
-  <li style="line-height: 2.2em">
-    <strong>
-      <a style="color: #377a85" href="/projects/survey/">Survey Form</a>
-    </strong>
-    -
-    <span>
-      With this poll we want to find out how the general public views magic in 2021.
-    </span>
-  </li>
-  
-  <li style="line-height: 2.2em">
-    <strong>
-      <a style="color: #377a85" href="/projects/bootstrap/">Bootstrap</a>
-    </strong>
-    -
-    <span>
-      This page was created primarily with Bootstrap. (Different layout)
-    </span>
-  </li>
-  
-  <li style="line-height: 2.2em">
-    <strong>
-      <a style="color: #377a85" href="/projects/feedback/">Feedback</a>
-    </strong>
-    -
-    <span>
-      Thank you for taking the time to provide your feedback.
-    </span>
-  </li>
-  
-  <li style="line-height: 2.2em">
-    <strong>
-      <a style="color: #377a85" href="/projects/Rock-paper-scissors/">Rock, paper, scrissors</a>
-    </strong>
-    -
-    <span>
-      Play a classic game of Rock-Paper-Scissors.
-    </span>
-  </li>
-  
-</ul>
+          <form name="feedback" method="POST" data-netlify="true">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label id="email-label" for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="feedback1" for="message">Message</label>
+              <textarea
+                class="message form-control"
+                name="comment"
+                for="message"
+                id="message"
+              ></textarea>
+            </div>
+            <br />
+            <input type="checkbox" id="tandc" name="tandc" value="TandC" />
+            <label class="tc" for="tandc" required>
+              I agree to the <a href="#">Terms and Conditions</a></label
+            ><br />
 
-</div>
+            <div>
+              <button class="submit" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
         <div class="glass"></div>
       </div>
     </main>
