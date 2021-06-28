@@ -258,9 +258,9 @@ main {
         transform: translateX(0) ;
         opacity: 1;}
    }
-.text{
+.text {
     grid-area: 2 / 4 / 4 / 8;
-    padding:0.9rem 2rem;
+    padding: 0.9rem 2rem;
     background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
@@ -271,6 +271,7 @@ main {
     z-index: 3;
     list-style: none;
 }
+
 
 @media only screen and (max-width: 900px) {
   .container {
