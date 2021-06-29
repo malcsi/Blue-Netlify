@@ -1,11 +1,10 @@
 ---
 layout: layouts/javascript-forms.njk
 title: JavaScript - To do list
-description: In this exercise I created a basic "To do app", where the user can add a task in the list or delete it when needed.
+description: The purpose of this exercise was to build a "To do" app, which allows users to add a task, as well as its priority.
 date: 2021-06-29
 ---
 <pre style="margin:5%;">
-
 
 <code style="color: blue">
 const priorityImages = {
