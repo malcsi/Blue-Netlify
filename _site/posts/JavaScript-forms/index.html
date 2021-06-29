@@ -212,7 +212,8 @@
       }
 
       /* The unordered list containing the todos */
-      #title, #priority {
+      #title,
+      #priority {
         padding: 0.7em;
         margin: auto;
         border: 2px solid white;
@@ -237,7 +238,7 @@
         padding-right: 1rem;
         z-index: 7;
       }
-      
+
       /* The small text in the footer */
       small {
         color: #57575d;
@@ -338,28 +339,30 @@
         </div>
         <div class="base">
           <div class="form-container">
-              <form id="todo">
-                <h2>TO DO LIST</h2>
+            <form id="todo">
+              <h2>TO DO LIST</h2>
               <p>Remove the item by double-clicking on it.</p>
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" required />
-                <label for="priority">Priority</label>
-                <select name="priority" id="priority">
-                  <option value="low">Low</option>
-                  <option value="medium" selected>Medium</option>
-                  <option value="high">High</option>
-                </select>
-                <button class="submit-btn">Add</button>
-                <ul id="todo-pane"></ul>
-              </form>
-              <small>
-                Flag images used with thanks from
-                <a href="https://www.iconfinder.com/iconsets/prettyoffice8"
-                  >https://www.iconfinder.com/iconsets/prettyoffice8</a
-                >.
-              </small>
-            </div>
-            <p><pre style="margin:2% 5%;">
+              <label for="title">Title</label>
+              <input type="text" name="title" id="title" required />
+              <label for="priority">Priority</label>
+              <select name="priority" id="priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+              <button class="submit-btn">Add</button>
+              <ul id="todo-pane"></ul>
+            </form>
+            <small>
+              Flag images used with thanks from
+              <a href="https://www.iconfinder.com/iconsets/prettyoffice8"
+                >https://www.iconfinder.com/iconsets/prettyoffice8</a
+              >.
+            </small>
+          </div>
+          <p><pre style="margin:5%;">
+
+
 <code style="color: blue">
 const priorityImages = {
 	low: 'https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-green.png',
@@ -396,7 +399,6 @@ function createTodo(title,priority) {
 </code>
 </pre>
 </p>
-          
         </div>
         <div class="glass"></div>
       </div>
