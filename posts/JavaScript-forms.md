@@ -21,9 +21,6 @@ const prioritySelect = document.querySelector("#priority");
 const allTodos = document.getElementsByClassName("todo");
 
 form.addEventListener('submit', function(event) {
-  for (const todo of allTodos) {
-    todo.classList.add('just-created');
-  }
   todoPane.appendChild(createTodo(titleInput.value, prioritySelect.value))
 	titleInput.value = '';
 	event.preventDefault();

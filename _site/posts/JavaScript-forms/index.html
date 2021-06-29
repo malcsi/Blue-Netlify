@@ -212,8 +212,7 @@
       }
 
       /* The unordered list containing the todos */
-      #title,
-      #priority {
+      #title, #priority {
         padding: 0.7em;
         margin: auto;
         border: 2px solid white;
@@ -238,7 +237,7 @@
         padding-right: 1rem;
         z-index: 7;
       }
-
+      
       /* The small text in the footer */
       small {
         color: #57575d;
@@ -334,33 +333,70 @@
         </div>
         <div class="text">
           <img class="pencil" src="pencil.gif" alt="" />
-          <p>{{ title }}</p>
-          <h4>{{ description }}</h4>
+          <p>JavaScript - To do list</p>
+          <h4>In this exercise I created a basic &quot;To do app&quot;, where the user can add a task in the list or delete it when needed.</h4>
         </div>
         <div class="base">
           <div class="form-container">
-            <form id="todo">
-              <h2>TO DO LIST</h2>
+              <form id="todo">
+                <h2>TO DO LIST</h2>
               <p>Remove the item by double-clicking on it.</p>
-              <label for="title">Title</label>
-              <input type="text" name="title" id="title" required />
-              <label for="priority">Priority</label>
-              <select name="priority" id="priority">
-                <option value="low">Low</option>
-                <option value="medium" selected>Medium</option>
-                <option value="high">High</option>
-              </select>
-              <button class="submit-btn">Add</button>
-              <ul id="todo-pane"></ul>
-            </form>
-            <small>
-              Flag images used with thanks from
-              <a href="https://www.iconfinder.com/iconsets/prettyoffice8"
-                >https://www.iconfinder.com/iconsets/prettyoffice8</a
-              >.
-            </small>
-          </div>
-          <p>{{ content | sage }}</p>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required />
+                <label for="priority">Priority</label>
+                <select name="priority" id="priority">
+                  <option value="low">Low</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="high">High</option>
+                </select>
+                <button class="submit-btn">Add</button>
+                <ul id="todo-pane"></ul>
+              </form>
+              <small>
+                Flag images used with thanks from
+                <a href="https://www.iconfinder.com/iconsets/prettyoffice8"
+                  >https://www.iconfinder.com/iconsets/prettyoffice8</a
+                >.
+              </small>
+            </div>
+            <p><pre style="margin:2% 5%;">
+<code style="color: blue">
+const priorityImages = {
+	low: 'https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-green.png',
+	medium: 'https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-yellow.png',
+	high: 'https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-red.png',
+};
+
+const form = document.getElementById("todo");
+const todoPane = document.getElementById("todo-pane");
+const titleInput = document.querySelector("#title");
+const prioritySelect = document.querySelector("#priority");
+const allTodos = document.getElementsByClassName("todo");
+
+form.addEventListener('submit', function(event) {
+  todoPane.appendChild(createTodo(titleInput.value, prioritySelect.value))
+	titleInput.value = '';
+	event.preventDefault();
+});
+
+
+function createTodo(title,priority) {
+	const text = document.createTextNode(title);
+    const list = document.createElement("li");
+    const image = document.createElement('img');
+    image.src = priorityImages[priority];
+    list.appendChild(image);
+	list.appendChild(text);
+  
+    list.addEventListener("dblclick", function(event) {
+        event.currentTarget.remove();
+    });
+	return list;
+};
+</code>
+</pre>
+</p>
+          
         </div>
         <div class="glass"></div>
       </div>
