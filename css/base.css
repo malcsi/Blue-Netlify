@@ -377,3 +377,18 @@ main {
     font-size: 1.4em;
 }
 }
+@media only screen and (max-width: 500px) {
+.text {
+  padding: 0;
+  font-size: 0.7em;
+}
+.home a,
+.projects a,
+.blog a,
+.feedback a{
+  padding: 7px 17px;
+}
+.artworks {
+  margin-top: -3em;
+}
+}
