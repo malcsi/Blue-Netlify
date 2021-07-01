@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glass Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 600;
+            min-height: 100vh;
+            background: linear-gradient(to right top, #2da58f, #6cdbeb);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 8vw) repeat(4, 15.5vw) 10vw;
+            grid-template-rows: 10vh repeat(6, 12vh) 10vh;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+
+        .logo {
+            grid-area: 2 / 2 / 4 / 4;
+            font-family: "Monoton";
+            z-index: 3;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2vw;
+        }
+
+        .logo img {
+            width: 8em;
+        }
+
+        .home,
+        .projects,
+        .blog,
+        .feedback {
+            z-index: 5;
+            text-align: center;
+        }
+
+        .home a,
+        .projects a,
+        .blog a,
+        .feedback a {
+            color: #57575d;
+            text-decoration: none;
+            font-size: 2vw;
+            padding: 10px 25px;
+            border: 1 px solid;
+            border-radius: 20px;
+            background: white;
+            background: linear-gradient(to right bottom,
+                    rgba(255, 255, 255, 0.8),
+                    rgba(255, 255, 255, 0.199));
+        }
+
+        .home a:hover,
+        .projects a:hover,
+        .blog a:hover,
+        .feedback a:hover {
+            background-color: white;
+            padding: 16px 32px;
+        }
+
+        .welcome {
+            text-align: center;
+            color: #57575d;
+            font-size: 2.5em;
+            animation: text 5s forwards;
+        }
+
+        @keyframes text {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .home {
+            grid-area: 4 / 2 / 5 / 4;
+            animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+
+        @keyframes slide-in-top {
+            0% {
+                transform: translateY(-1000px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .projects {
+            grid-area: 5 / 2 / 6 / 4;
+            animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+        }
+
+        .blog {
+            grid-area: 6 / 2 / 7 / 4;
+            animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+        }
+
+        .feedback {
+            grid-area: 7 / 2 / 8 / 4;
+            animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
+        }
+
+        .glass {
+            grid-area: 2 / 2 / 8 / 8;
+            background: white;
+            background: linear-gradient(to right bottom,
+                    rgba(255, 255, 255, 0.7),
+                    rgba(255, 255, 255, 0.3));
+            border-radius: 2rem;
+            backdrop-filter: blur(2rem);
+        }
+
+        @keyframes welcome {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .text {
+            grid-area: 2 / 4 / 4 / 8;
+            padding: 0.9rem 1rem;
+            background: linear-gradient(to right bottom,
+                    rgba(255, 255, 255, 0.7),
+                    rgba(255, 255, 255, 0.3));
+            border: 1px solid transparent;
+            border-radius: 2em;
+            z-index: 3;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .base {
+            grid-area: 4 / 4 / 8 / 8;
+            background: white;
+            z-index: 2;
+            background: linear-gradient(to right bottom,
+                    rgba(255, 255, 255, 0.8),
+                    rgba(255, 255, 255, 0.199));
+            border-radius: 30px;
+            overflow-y: scroll;
+            height: 90%;
+            padding: 1% 2%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .myImages {
+            text-align: center;
+        }
+
+        .vertical {
+            width: 25vh;
+            margin: 1%;
+            border: 1px solid #57575d;
+            border-radius: 20px;
+        }
+
+        .horizontal {
+            height: 30vh;
+            margin: 1%;
+            border: 1px solid #57575d;
+            border-radius: 20px;
+        }
+
+        #search {
+            padding: 2px 10px;
+            color: #57575d;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .my-title {
+            color: #57575d;
+            font-family: "Ubuntu", sans-serif;
+            font-size: 2.5vw;
+        }
+
+        form {
+            display: inline-block;
+            color: #57575d;
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width: 1080px) {
+            .container {
+                grid-template-columns: repeat(2, 49vw);
+                grid-template-rows: 20vh repeat(2, 10vh) 25vh 10vh repeat(3, 20vh);
+                grid-column-gap: 0px;
+                grid-row-gap: 6px;
+            }
+
+            .logo {
+                grid-area: 1 / 1 / 2 / 4;
+            }
+
+            .logo img {
+                width: 12rem;
+                margin-top: 6%;
+            }
+
+            .home {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            .projects {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+
+            .blog {
+                grid-area: 2 / 2 / 3 / 3;
+            }
+
+            .feedback {
+                grid-area: 3 / 2 / 4 / 3;
+            }
+
+            .text {
+                grid-area: 4 / 1 / 6 / 3;
+                text-align: center;
+                margin: 1% 5%;
+            }
+
+            .text p {
+                font-size: 1.4em;
+            }
+
+            .base {
+                grid-area: 6 / 1 / 9 / 3;
+                margin: -1% 5%;
+            }
+
+            .glass {
+                grid-area: 1 / 1 / 9 / 3;
+                margin: 5%;
+            }
+
+            .home a,
+            .projects a,
+            .blog a,
+            .feedback a {
+                font-size: 1.4em;
+            }
+
+            .my-title {
+                font-size: 3.5vh;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+
+            .base,
+            .text,
+            .glass {
+                margin: 0;
+            }
+        }
+    </style>
+
+</html>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="logo">
+                <a href="https://ana-horhoianu.netlify.app/"><img
+                        src="https://i.ibb.co/cxs25TL/output-onlinepngtools-1.png" alt="logo" /></a>
+            </div>
+            <div class="home">
+                <a href="https://ana-horhoianu.netlify.app/">Home</a>
+            </div>
+            <div class="projects">
+                <a href="https://ana-horhoianu.netlify.app/projects">Projects</a>
+            </div>
+            <div class="blog">
+                <a href="https://ana-horhoianu.netlify.app/posts">Blog</a>
+            </div>
+            <div class="feedback">
+                <a href="https://ana-horhoianu.netlify.app//projects/feedback/">Feedback</a>
+            </div>
+            <div class="text">
+                <h2 class="my-title">My Pencil Drawings</h2>
+                <form id="myForm">
+                    <label for="singer">Singers</label>
+                    <input type="radio" name="drawType" id="singer" value="singer" />
+                    <label for="actors">Actors</label>
+                    <input type="radio" name="drawType" id="actor" value="actor" />
+                    <label for="surrealism">Surrealism</label>
+                    <input type="radio" name="drawType" id="surrealism" value="surrealism" />
+                    <label for="animals">Animals</label>
+                    <input type="radio" name="drawType" id="animal" value="animal" />
+                    <label for="diverse">Diverse</label>
+                    <input type="radio" name="drawType" id="diverse" value="diverse" />
+                    <label for="all">Show all</label>
+                    <input type="radio" name="drawType" id="all" value="all" checked />
+                    <br />
+                    <label for="search">Search</label>
+                    <input type="search" name="search" id="search" />
+                </form>
+
+            </div>
+            <div class="base">
+                <div class="myImages">
+                    <a href="https://ibb.co/4MCkTw5" target="_blank"><img drawing="surrealism"
+                            class="vertical imageFilter" src="https://i.ibb.co/3WVKN5L/surrealism1.jpg"
+                            alt="surrealism"></a>
+                    <a href="https://ibb.co/mGZbnDg" target="_blank"><img drawing="actor" class="vertical imageFilter"
+                            src="https://i.ibb.co/PNXF2m0/movie-actor2.jpg" alt="actor"></a>
+                    <a href="https://ibb.co/q1D8StZ" target="_blank"><img drawing="diverse" class="vertical imageFilter"
+                            src="https://i.ibb.co/zfmgMyk/diverse3.jpg" alt="diverse"></a>
+                    <a href="https://ibb.co/TkvyhCK" target="_blank"><img drawing="animal" class="vertical imageFilter"
+                            src="https://i.ibb.co/bPWtdfH/animal2.jpg" alt="animal"></a>
+                    <a href="https://ibb.co/wzQJr61" target="_blank"><img drawing="singer" class="vertical imageFilter"
+                            src="https://i.ibb.co/4VSsgNx/singer2.jpg" alt="singer"></a>
+                    <a href="https://ibb.co/CJCPt60" target="_blank"><img drawing="actor" class="vertical imageFilter"
+                            src="https://i.ibb.co/cbfYvwT/movie-actors3.jpg" alt="actor"></a>
+                    <a href="https://ibb.co/qRPK9rP" target="_blank"><img drawing="actor" class="vertical imageFilter"
+                            src="https://i.ibb.co/nD59fL5/movie-actors1.jpg" alt="actor"></a>
+                    <a href="https://ibb.co/NsKjDcW" target="_blank"><img drawing="singer" class="vertical imageFilter"
+                            src="https://i.ibb.co/56L8pbs/singer3.jpg" alt="singer"></a>
+                    <a href="https://ibb.co/Nx1KDbK" target="_blank"><img drawing="diverse" class="vertical imageFilter"
+                            src="https://i.ibb.co/dBbDCxD/friend-portrait3.jpg" alt="diverse"></a>
+                    <a href="https://ibb.co/bJSvhgq" target="_blank"><img drawing="singer" class="vertical imageFilter"
+                            src="https://i.ibb.co/rsCpPGT/singer4.jpg" alt="singer"></a>
+                    <a href="https://ibb.co/yPsZPPV" target="_blank"><img drawing="surrealism"
+                            class="vertical imageFilter" src="https://i.ibb.co/B3sQ33w/surrealism2.jpg"
+                            alt="surrealism"></a>
+                    <a href="https://ibb.co/cJHqVhp" target="_blank"><img drawing="diverse"
+                            class="horizontal imageFilter" src="https://i.ibb.co/CBZLDKX/Friend-portrait2.jpg"
+                            alt="diverse"></a>
+                    <a href="https://ibb.co/wpc13R3" target="_blank"><img drawing="surrealism"
+                            class="horizontal imageFilter" src="https://i.ibb.co/ssWrk2k/surrealism3.jpg"
+                            alt="surrealism"></a>
+                    <a href="https://ibb.co/WB1m92S" target="_blank"><img drawing="singer"
+                            class="horizontal imageFilter" src="https://i.ibb.co/p4pYDLC/singer1.jpg" alt="singer"></a>
+                    <a href="https://ibb.co/D9PmtXq" target="_blank"><img drawing="animal"
+                            class="horizontal imageFilter" src="https://i.ibb.co/ByHvtD1/animal1.jpg" alt="animal"></a>
+
+                </div>
+            </div>
+            <div class="glass"></div>
+        </div>
+    </main>
+    <script>
+        const images = document.getElementsByClassName('imageFilter');
+        const form = document.forms.myForm;
+        const radios = form.elements.drawType;
+        const search = form.elements.search;
+
+        function showDraw(image) {
+            const selectedDraw = radios.value;
+            if (selectedDraw !== 'all' && selectedDraw !== image.getAttribute('drawing')) {
+                return false;
+            }
+            if (!search.value) {
+                return true;
+            }
+            return image.alt.includes(search.value);
+        }
+
+        function filterDrawings() {
+            for (const image of images) {
+                if (showDraw(image)) {
+                    image.classList.remove('hidden');
+                }
+                else {
+                    image.classList.add('hidden');
+                }
+            }
+        }
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+        });
+
+        for (const radio of radios) {
+            radio.addEventListener('change', filterDrawings);
+        }
+
+        search.addEventListener('keyup', filterDrawings);
+    </script>
+</body>
+
+</html>
