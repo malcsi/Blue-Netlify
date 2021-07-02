@@ -187,10 +187,10 @@ main {
   width: 70%;
 }
 .bar .progress-line.javascript span{
-  width: 40%;
+  width: 50%;
 }
 .bar .progress-line.bootstrap span{
-  width: 50%;
+  width: 60%;
 }
 .bar .progress-line.photoshop span{
   width: 50%;
@@ -234,13 +234,13 @@ main {
   content: "70%";
 }
 .progress-line.javascript span::after{
-  content: "40%";
-}
-.progress-line.bootstrap span::after{
   content: "50%";
 }
+.progress-line.bootstrap span::after{
+  content: "60%";
+}
 .progress-line.photoshop span::after{
-  content: "66%";
+  content: "50%";
 }
 .text p{
     font-size: 1.2em;
